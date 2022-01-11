@@ -5,7 +5,7 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 
 
 * System dependencies
 
@@ -21,7 +21,8 @@ Things you may want to cover:
 
 * Deployment instructions
 
-# Instruction
+
+# Introduce
 
 + view all product
 + product information
@@ -39,7 +40,7 @@ Things you may want to cover:
 https://obscure-sands-43775.herokuapp.com/
 
 
-# Run Local
+# Instruction Run Local
 
 Set database and config
 1. cd Son_Shoe_Shop
