@@ -43,11 +43,14 @@ https://obscure-sands-43775.herokuapp.com/
 # Instruction Run Local
 
 Set database and config
-1. cd Son_Shoe_Shop
-2. rake db:create
-3. rails db:migration
-4. rake db:seed
-5. rails s
+Open Terminator and enter comman
+
+1. cd Son_Shoe_Store
+2. bundle install
+3. rake db:create
+4. rake db:migrate
+5. rake db:seed
+6. rails s
 
 
 * ...
