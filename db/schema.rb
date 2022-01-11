@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20220111085929) do
+ActiveRecord::Schema.define(version: 20220111085917) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -32,8 +35,8 @@ ActiveRecord::Schema.define(version: 20220111085929) do
   end
 
   create_table "line_items", force: :cascade do |t|
-    t.integer "instrument_id"
-    t.integer "cart_id"
+    t.bigint "instrument_id"
+    t.bigint "cart_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "quantity", default: 1
@@ -59,4 +62,6 @@ ActiveRecord::Schema.define(version: 20220111085929) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "line_items", "carts"
+  add_foreign_key "line_items", "instruments"
 end
